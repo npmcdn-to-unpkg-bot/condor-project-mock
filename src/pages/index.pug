@@ -1,23 +1,39 @@
 extends ../templates/basic.pug
 
+mixin article(article)
+	article(class="w-25-l mb5")
+		header
+			h2
+				a(href="#") #{article.title}
+			p(class="subheading f6-l")
+				| Author: 
+				span #{article.author}
+				br
+				| Fecha: 
+				span #{article.date}
+		p #{article.excerpt}
+
+
 block title
-	title Index | Sample Boiler
+	title Home -MOCK- | Condor Project
 
 block styles
 	link(rel="stylesheet", href="styles/index.css")
 
-block content
-	h1 INDEX
-	
-	nav
-		a(href="index.html") Algo | 
-		a(href="about.html") I bueee
-	
-	div#hello
-		= ' ' + message
+block navigation
+	each category in categories
+				li(class="mb3")
+					a(href="#")= category
 
-	div.
-		This is index page! Enjoy!
+block content
+	div#content(class="pl4 pr4 w-75-l")
+		section#featured(class="flex justify-between flex-wrap")
+			h1.w-100-l Artículos Destacados
+			each article in featured
+				+article(article)
+		section#recent(class="flex justify-between flex-wrap")
+			h1.w-100-l Artículos Recientes
+			each article in recent
+				+article(article)
 
 block scripts
-	script(src="js/index.js")

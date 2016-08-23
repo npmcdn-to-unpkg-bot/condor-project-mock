@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 html(lang="en")
-head
-	meta(charset="UTF-8")
-	meta(http-equiv="X-UA-Compatible", content="IE=edge")
-	meta(name="viewport", content="width=device-width, initial-scale=1")
-	link(rel="stylesheet", href="https://npmcdn.com/tachyons@4.0.6/css/tachyons.min.css")
-	block styles
-	block title
-		title Condor Project Mock
-body
-	header(class="")
-		div#logo logo
-		div#search(class="")
-			form(action="#" role="search")
-				input(type="search" placeholder="Buscar...")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel="stylesheet", href="https://npmcdn.com/tachyons@4.0.6/css/tachyons.min.css")
+		block styles
+		block title
+			title Condor Project Mock
+	body(class="center mw9-l br bl")
+		header(class="flex justify-between bb pt3 pr4 pl4 pb3")
+			div#logo.ttu logo
+			div#search(class="self-center pr4")
+				form(action="#" role="search")
+					input(type="search" placeholder="Buscar...")
 
-	div#sidebar(class="")
-		h1 Categorías
-		nav
-			block categories
+		main(class="flex justify-between")
+			div#sidebar(class="w-25-l br pl4")
+				h1 Categorías
+				nav
+					ul.list
+						block navigation
+			block content
 
-	block content
+		footer(class="flex justify-between pr4 pl4 bt pt3")
+			div#subnav(class="")
+				h1(class="f4-l") Projecto Condor
+				ul.list
+					li(class="dib mr2")
+						a(href="home.html") Inicio
+						|  |
+					li(class="dib mr2")
+						a(href="about.html") ¿Quienes Somos?
+						|  |
+					li(class="dib mr2")
+						a(href="faq.html") FAQ
+			div(class="self-end")
+				small.
+					Developed by &copy;FriasDesign. Designed by &copy;Imaginer. All rights reserved.
 
-	footer(class="")
-		div#subnav(class="")
-			h1(class="") Projecto Condor
-			ul
-				li
-					a(href="home.html") Inicio
-				li
-					a(href="about.html") ¿Quienes Somos?
-				li
-					a(href="faq.html") FAQ
-		div(class="")
-			small.
-				Developed by &copy;FriasDesign. Designed by &copy;Imaginer. All rights reserved.
-
-	block scripts
+		block scripts
