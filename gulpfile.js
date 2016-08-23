@@ -3,13 +3,13 @@ var gulp = require('gulp'),
 		browserSync = require('browser-sync').create(),
 		testData = require('./testData.js');
 
-gulp.task('serve', ['template-compile'], function serve() {
+gulp.task('serve', ['js-compile', 'style-compile', 'template-compile'], function serve() {
 	browserSync.init({
 		server: './build'
 	});
 
 	gulp.watch('src/assets/*.css', ['style-compile']);
-	gulp.watch('src/assets/*.js');
+	gulp.watch('src/assets/*.js'), ['js-compile'];
 	gulp.watch('src/*.pug', ['template-compile']).on('change', browserSync.reload);
 });
 
