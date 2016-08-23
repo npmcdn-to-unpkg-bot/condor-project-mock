@@ -1,0 +1,27 @@
+{
+  "name": "ui-mocking-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for fast mocking UI designs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/friasdesign/UI-mocking-boilerplate.git"
+  },
+  "keywords": [
+    "UID",
+    "UXD",
+    "User",
+    "Interface",
+    "Design",
+    "Boilerplate"
+  ],
+  "author": "Carlos Frias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/friasdesign/UI-mocking-boilerplate/issues"
+  },
+  "homepage": "https://github.com/friasdesign/UI-mocking-boilerplate#readme"
+}
