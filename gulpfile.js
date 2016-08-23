@@ -8,9 +8,9 @@ gulp.task('serve', ['js-compile', 'style-compile', 'template-compile'], function
 		server: './build'
 	});
 
-	gulp.watch('src/assets/*.css', ['style-compile']);
-	gulp.watch('src/assets/*.js'), ['js-compile'];
-	gulp.watch('src/*.pug', ['template-compile']).on('change', browserSync.reload);
+	gulp.watch('src/assets/styles/*.css', ['style-compile']);
+	gulp.watch('src/assets/js/*.js', ['js-compile']).on('change', browserSync.reload);
+	gulp.watch('src/*/*.pug', ['template-compile']);
 });
 
 gulp.task('template-compile', function pugCompile() {
@@ -19,12 +19,14 @@ gulp.task('template-compile', function pugCompile() {
 			locals: testData
 		}))
 		.pipe(gulp.dest('build/'))
+		.pipe(browserSync.stream())
 	;
 });
 
 gulp.task('style-compile', function styleCompile() {
 	return gulp.src('src/assets/styles/*.css')
 		.pipe(gulp.dest('build/styles'))
+		.pipe(browserSync.stream())
 	;
 });
 
