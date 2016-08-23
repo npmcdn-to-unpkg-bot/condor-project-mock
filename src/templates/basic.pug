@@ -7,7 +7,33 @@ head
 	link(rel="stylesheet", href="https://npmcdn.com/tachyons@4.0.6/css/tachyons.min.css")
 	block styles
 	block title
-		title Boiler Sample
+		title Condor Project Mock
 body
+	header(class="")
+		div#logo logo
+		div#search(class="")
+			form(action="#" role="search")
+				input(type="search" placeholder="Buscar...")
+
+	div#sidebar(class="")
+		h1 Categorías
+		nav
+			block categories
+
 	block content
+
+	footer(class="")
+		div#subnav(class="")
+			h1(class="") Projecto Condor
+			ul
+				li
+					a(href="home.html") Inicio
+				li
+					a(href="about.html") ¿Quienes Somos?
+				li
+					a(href="faq.html") FAQ
+		div(class="")
+			small.
+				Developed by &copy;FriasDesign. Designed by &copy;Imaginer. All rights reserved.
+
 	block scripts
