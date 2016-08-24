@@ -3,10 +3,8 @@
 }
 
 #logo {
-	width: 70px;
 	background-color: #c7c7c7;
 	color: #e6e6e6;
-	line-height: 70px;
 	text-align: center;
 }
 
@@ -14,11 +12,44 @@
 	color: #A0A0A0;
 }
 
-@media screen and (min-width: 64em) {
+.top-header {
+	/* height: 48px; */
+	background-color: white;
+}
+
+#sidebar {
+	background-color: white;
+	z-index: 10;
+	min-height: 100vh;
+}
+
+#search-form {
+	z-index: 10;
+}
+
+.sidebar {
+	left: -40rem;
+}
+
+.sidebar--open {
+	left: 0;
+}
+
+@media screen and (min-width: 30em) {
 	.top-header {
 		height: 100px;
+		position: static;
 	}
 	main {
 		min-height: 90vh;
 	}
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: #c7c7c7;
+  fill: #c7c7c7;
 }

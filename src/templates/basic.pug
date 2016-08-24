@@ -9,23 +9,30 @@ html(lang="en")
 		block title
 			title Condor Project Mock
 	body(class="center mw9-l br bl")
-		header(class="flex justify-between bb pt3 pr4 pl4 pb3 top-header")
-			div#logo.ttu logo
-			div#search(class="self-center pr4")
-				form(action="#" role="search")
-					input(type="search" placeholder="Buscar...")
+		header(class="flex flex-wrap items-center justify-between w-100 bb top-header pr4-l pt3-l pb3-l pl4-l pa2")
+			div#hamburguer(class="f2 dn-m dn-l") &#8801;
+			div(class="ttu w-60 w-10-ns h-100")
+				div#logo(class="w-100 h-100") logo
+			div#search-ico(class="dn-ns w-10 tc f4")
+					svg(class="icon icon-search")
+						<use xlink:href="#icon-search"></use>
+			div#search(class="self-center pr4-l w-100 w-25-ns tr dn db-ns")
+				form#search-form(action="#" role="search" class="")
+					input(type="search" placeholder="Buscar..." class="w-100 search--open")
 
 		main(class="flex justify-between")
-			div#sidebar(class="w-25-l br pl4")
+			div#sidebar(class="w-33-m w-25-l w-100 br pl3 pr3 pl4-l db-ns fixed static-ns sidebar")
 				h1 Categorías
 				nav
 					ul.list
 						block navigation
-			block content
 
-		footer(class="flex justify-between pr4 pl4 bt pt3 pb2")
-			div#subnav(class="")
-				h1(class="f4-l") Projecto Condor
+			div#content(class="pl4-l pr4-l pr3 pl3 w-100 w-60-m w-75-l center")
+				block content
+
+		footer(class="flex flex-wrap justify-between pr4 pl4 bt pt3 pb2")
+			div#subnav
+				h1(class="f4") Projecto Condor
 				ul.list
 					li(class="dib mr2")
 						a(href="home.html") Inicio
@@ -35,8 +42,9 @@ html(lang="en")
 						|  |
 					li(class="dib mr2")
 						a(href="faq.html") FAQ
-			div(class="self-end")
+			div(class="self-end f6")
 				small.
-					Developed by &copy;FriasDesign. Designed by &copy;Imaginer. All rights reserved.
+					Developed by &copy;FriasDesign.<br>Designed by &copy;Imaginer. All rights reserved.
 
 		block scripts
+	include ./icons.pug

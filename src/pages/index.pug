@@ -1,7 +1,7 @@
 extends ../templates/basic.pug
 
 mixin article(article)
-	article(class="w-33-l mb5 pa2")
+	article(class="w-100 w-50-m w-33-l mb3 mb5-ns pa2")
 		header
 			h2
 				a(href="#") #{article.title}
@@ -26,14 +26,14 @@ block navigation
 					a(href="#")= category
 
 block content
-	div#content(class="pl4 pr4 w-75-l")
-		section#featured(class="flex justify-between flex-wrap")
-			h1.w-100-l Artículos Destacados
-			each article in featured
-				+article(article)
-		section#recent(class="flex justify-between flex-wrap")
-			h1.w-100-l Artículos Recientes
-			each article in recent
-				+article(article)
+	section#featured(class="flex justify-between flex-wrap")
+		h1.w-100-l Artículos Destacados
+		each article in featured
+			+article(article)
+	section#recent(class="flex justify-between flex-wrap")
+		h1.w-100-l Artículos Recientes
+		each article in recent
+			+article(article)
 
 block scripts
+	script(src="js/index.js")
