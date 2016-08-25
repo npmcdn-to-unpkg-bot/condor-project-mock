@@ -3,14 +3,22 @@ extends ../templates/basic.pug
 mixin article(article)
 	article(class="w-100 w-50-m w-33-l mb3 mb5-ns pa2")
 		header
-			h2
+			small(class="i gray") 
+				| #{article.category}
+			h2.mt1
 				a(href="#") #{article.title}
 			p(class="subheading f6-l")
-				| Author: 
-				span #{article.author}
+				| Tipo: 
+				span
+					| #{article.type}
+					if article.style
+						= ' - ' + article.style
 				br
 				| Fecha: 
 				span #{article.date}
+				br
+				| Author: 
+				span #{article.author}
 		p #{article.excerpt}
 
 
