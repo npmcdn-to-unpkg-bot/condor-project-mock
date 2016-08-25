@@ -10,26 +10,7 @@ block navigation
 
 block content
 	h1.mb3 Resultados
-
-	div#filter-bar(class="flex justify-between flex-wrap f6 pt3 pb3 bb bt mb4")
-		h2#filter-heading(class="mt0 mb1 w-100")
-			| Filtros
-			span(class="w-10 f5 gray ml2") &#9666;
-		form#filters(action="#" name="filter" class=" justify-between w-100 flex-wrap pl2 dn")
-			div#filter-date-group(class="flex flex-wrap w-33 w-33-l")
-				label(for="#filter-date" class="w-100") Fecha
-				select#filter-date(name="date")
-					option(value="0") Mas nuevo
-					option(value="1") Mas antiguo
-			div#filter-type-group(class="flex flex-wrap w-25 w-33-l")
-				label(for="#filter-type" class="w-100") Tipo
-				select#filter-date(name="type")
-					option(value="Ensayo") Ensayo
-					option(value="Informe") Informe
-			div#filter-category-group(class="flex flex-wrap w-33 w-33-l")
-				label(for="#filter-category" class="w-100") Categoria
-				input#filter-category(type="text" name="category" class="w-100")
-
+	+filterBar()
 
 	section#results(class="flex justify-between flex-wrap")
 		each article in featured
