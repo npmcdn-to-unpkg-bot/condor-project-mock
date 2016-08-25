@@ -28,9 +28,9 @@ mixin navigation(categories)
 			ul(class="mt2 pl4 dn subcategory")
 				each subcategory in category.subcategories
 					li(class="list mb2 submenu-item")
-						a(href="#")= subcategory
+						a(href='category.html?name='+subcategory)= subcategory
 
-mixin filterBar()
+mixin filterBar(inSearch)
 	div#filter-bar(class="flex justify-between flex-wrap f6 pt3 pb3 bb bt mb4")
 		h2#filter-heading(class="mt0 mb1 w-100")
 			| Filtros
@@ -46,6 +46,7 @@ mixin filterBar()
 				select#filter-date(name="type")
 					option(value="Ensayo") Ensayo
 					option(value="Informe") Informe
-			div#filter-category-group(class="flex flex-wrap w-33 w-33-l")
-				label(for="#filter-category" class="w-100") Categoria
-				input#filter-category(type="text" name="category" class="w-100")
+			if inSearch
+				div#filter-category-group(class="flex flex-wrap w-33 w-33-l")
+					label(for="#filter-category" class="w-100") Categoria
+					input#filter-category(type="text" name="category" class="w-100")

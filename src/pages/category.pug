@@ -9,12 +9,12 @@ block navigation
 	+navigation(categories)
 
 block content
-	h1.mb3 Resultados
-	+filterBar(true)
+	h1#cat-title.mb3 Category
+	+filterBar()
 
 	section#results(class="flex justify-between flex-wrap")
 		each article in featured
 			+article(article)
 
 block scripts
-	script(src="js/search.js")
+	script(src="js/category.js")
