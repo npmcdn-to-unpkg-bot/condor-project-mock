@@ -1,0 +1,47 @@
+extends ../templates/basic.pug
+
+mixin article(article)
+	article(class="w-100 w-50-m w-33-l mb3 mb5-ns pa2")
+		header
+			small(class="i gray") 
+				| #{article.category}
+			h2.mt1
+				a(href="#") #{article.title}
+			p(class="subheading f6-l")
+				| Tipo: 
+				span
+					| #{article.type}
+					if article.style
+						= ' - ' + article.style
+				br
+				| Fecha: 
+				span #{article.date}
+				br
+				| Author: 
+				span #{article.author}
+		p #{article.excerpt}
+
+
+block title
+	title Home -MOCK- | Condor Project
+
+block styles
+	link(rel="stylesheet", href="styles/index.css")
+
+block navigation
+	each category in categories
+				li(class="mb3")
+					a(href="#")= category.name
+
+block content
+	section#featured(class="flex justify-between flex-wrap")
+		h1.w-100-l Artículos Destacados
+		each article in featured
+			+article(article)
+	section#recent(class="flex justify-between flex-wrap")
+		h1.w-100-l Artículos Recientes
+		each article in recent
+			+article(article)
+
+block scripts
+	script(src="js/index.js")

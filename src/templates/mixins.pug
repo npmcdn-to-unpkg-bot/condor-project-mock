@@ -1,0 +1,31 @@
+mixin article(article)
+	article(class="w-100 w-50-m w-33-l mb3 mb5-ns pa2")
+		header
+			small(class="i gray") 
+				| #{article.category}
+			h2.mt1
+				a(href="#") #{article.title}
+			p(class="subheading f6-l")
+				| Tipo: 
+				span
+					| #{article.type}
+					if article.style
+						= ' - ' + article.style
+				br
+				| Fecha: 
+				span #{article.date}
+				br
+				| Author: 
+				span #{article.author}
+		p #{article.excerpt}
+
+mixin navigation(categories)
+	each category in categories
+		li(class="mb3")
+			div(class="menu-item" data-catname=category.name)
+				span(class="f5 gray mr2") &#9656;
+				span= category.name
+			ul(class="mt2 pl4 dn subcategory")
+				each subcategory in category.subcategories
+					li(class="list mb2 submenu-item")
+						a(href="#")= subcategory
