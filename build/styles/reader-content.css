@@ -1,0 +1,10 @@
+/* HOUSE STYLES */
+
+main {
+	top: 48px;
+}
+
+#content {
+	min-height: 100vh;
+	position: relative;
+}

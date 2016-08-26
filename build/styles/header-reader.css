@@ -1,0 +1,22 @@
+header {
+	left: 0;
+	top: 0;
+	z-index: 5;
+	height: 48px;
+}
+
+#tool-bar {
+	top: 3rem;
+	right: 0;
+	height: 10rem;
+}
+
+#tool-bar > li {
+	width: 48px;
+	height: 48px;
+}
+
+.icon-toolbar {
+	stroke: #111;
+  fill: #111;
+}

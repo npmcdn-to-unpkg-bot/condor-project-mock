@@ -1,0 +1,32 @@
+#sidebar {
+	background-color: white;
+	z-index: 10;
+	min-height: 100vh;
+}
+
+.sidebar {
+	left: -40rem;
+}
+
+.sidebar--open {
+	left: 0;
+	position: absolute;
+	overflow-y: scroll;
+}
+
+.menu-item {
+	display: inline-block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.menu-item:hover {
+	background-color: #EAEAEA;
+}
+
+.submenu-item {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}

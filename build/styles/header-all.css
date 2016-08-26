@@ -1,0 +1,14 @@
+#logo {
+	background-color: #c7c7c7;
+	color: #e6e6e6;
+	text-align: center;
+}
+
+.top-header {
+	background-color: white;
+}
+
+#search-form {
+	z-index: 10;
+}
+

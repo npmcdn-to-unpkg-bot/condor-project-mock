@@ -1,0 +1,9 @@
+footer {
+	bottom: 0;
+	left: 0;
+}
+
+.close-section {
+	color: rgba(0, 0, 0, .4);
+	font-size: 0.6em;
+}

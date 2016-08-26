@@ -1,0 +1,17 @@
+html {
+	box-sizing: border-box;
+}
+
+* {
+	border-color: #c7c7c7;
+	box-sizing: inherit;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: #c7c7c7;
+  fill: #c7c7c7;
+}
