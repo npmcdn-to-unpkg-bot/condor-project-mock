@@ -21,11 +21,11 @@ body(role="application")
 		div(class="ttu w-50 h-100")
 			div#logo(class="w-100 h-100")
 				a(href="index.html") logo
-		div#tools
-			div#tools-icon(class="w-10 tc f4")
+		div#tools.w-10
+			div#tools-icon(class="tc f4")
 				svg(class="icon icon-wrench")
 					<use xlink:href="#icon-wrench"></use>
-			ul#tool-bar(class="list ma2 pa0 fixed flex flex-column justify-around")
+			ul#tool-bar(class="list ma2 pa0 fixed flex-column justify-around dn")
 				li#search-ico(class="f4 ba tc pa2 br-100 bg-white")
 					svg(class="icon icon-toolbar")
 						<use xlink:href="#icon-search"></use>
@@ -34,6 +34,7 @@ body(role="application")
 						<use xlink:href="#icon-text-color"></use>
 				li#back-color(class="f4 ba tc pa2 br-100 bg-near-white near-black")
 					span W
+
 	main.relative
 		div#sidebar(class="w-33-m w-25-l w-100 br pl3 pr3 pl4-l db-ns fixed sidebar")
 				h1 Categorías
