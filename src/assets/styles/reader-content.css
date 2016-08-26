@@ -4,6 +4,10 @@ main {
 	top: 48px;
 }
 
+.no-nav {
+	top: 0;
+}
+
 section {
 	margin-bottom: 5rem;
 }
