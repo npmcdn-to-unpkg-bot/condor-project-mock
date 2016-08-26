@@ -37,16 +37,6 @@ html {
 	overflow-y: scroll;
 }
 
-@media screen and (min-width: 30em) {
-	.top-header {
-		height: 100px;
-		position: static;
-	}
-	main {
-		min-height: 90vh;
-	}
-}
-
 .icon {
   display: inline-block;
   width: 1em;
@@ -73,6 +63,46 @@ html {
 	padding-bottom: 15px;
 }
 
-.subheading {
-	color: #A0A0A0;
+/* HOUSE STYLES */
+
+footer {
+	bottom: 0;
+	left: 0;
+}
+
+.close-section {
+	color: rgba(0, 0, 0, .4);
+	font-size: 0.6em;
+}
+
+header {
+	left: 0;
+	top: 0;
+	z-index: 5;
+	height: 48px;
+}
+
+main {
+	top: 48px;
+}
+
+#content {
+	min-height: 100vh;
+	position: relative;
+}
+
+#tool-bar {
+	top: 3rem;
+	right: 0;
+	height: 10rem;
+}
+
+#tool-bar > li {
+	width: 48px;
+	height: 48px;
+}
+
+.icon-toolbar {
+	stroke: #111;
+  fill: #111;
 }

@@ -19,12 +19,23 @@ var _SIDEBAR = (function SidebarInstanciator() {
 		var subCatHandler = function onClick(evt) {
 			var clickedText,
 					arrowRef,
-					subMenuRef;
+					subMenuRef,
+					selectedOpt = false;
 
+			// If user clicks directly to the container or the text inside save the
+			// container as selectedOption
 			if(evt.target.classList.contains('menu-item')) {
-				clickedText = evt.target.attributes['data-catname'].value;
-				arrowRef = evt.target.firstChild;
-				subMenuRef = evt.target.nextSibling;
+				selectedOpt = evt.target;
+			} else if(evt.target.parentNode.classList.contains('menu-item')) {
+				// If parentNode has menu-item class, user has clicked on the text
+				// inside.
+				selectedOpt = evt.target.parentNode;
+			}
+
+			if(selectedOpt) {
+				clickedText = selectedOpt.attributes['data-catname'].value;
+				arrowRef = selectedOpt.firstChild;
+				subMenuRef = selectedOpt.nextSibling;
 				
 				if(collapsedCat[clickedText]) {
 					collapsedCat[clickedText] = false;

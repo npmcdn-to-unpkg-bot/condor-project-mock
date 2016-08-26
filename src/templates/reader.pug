@@ -1,0 +1,61 @@
+include ./mixins.pug
+
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	meta(http-equiv="X-UA-Compatible", content="IE=edge")
+	meta(name="viewport", content="width=device-width, initial-scale=1")
+	link(rel="stylesheet", href="https://npmcdn.com/tachyons@4.0.6/css/tachyons.min.css")
+	link(rel="stylesheet", href="styles/reader.css")
+	block styles
+	title Reader App | Condor Project
+body(role="application")
+	header(class="flex flex-wrap items-center justify-around w-100 bb top-header fixed")
+		div#hamburguer(class="f2 w-10 dn-m dn-l") &#8801;
+		div(class="ttu w-50 h-100")
+			div#logo(class="w-100 h-100")
+				a(href="index.html") logo
+		div#tools
+			div#tools-icon(class="w-10 tc f4")
+				svg(class="icon icon-wrench")
+					<use xlink:href="#icon-wrench"></use>
+			ul#tool-bar(class="list ma2 pa0 fixed flex flex-column justify-around")
+				li#search-ico(class="f4 ba tc pa2 br-100 bg-white")
+					svg(class="icon icon-toolbar")
+						<use xlink:href="#icon-search"></use>
+				li#font-icon(class="f4 ba tc pa2 br-100 bg-white")
+					svg(class="icon icon-toolbar")
+						<use xlink:href="#icon-text-color"></use>
+				li#back-color(class="f4 ba tc pa2 br-100 bg-near-white near-black")
+					span W
+	main.relative
+		div#sidebar(class="w-33-m w-25-l w-100 br pl3 pr3 pl4-l db-ns fixed sidebar")
+				h1 Categorías
+				nav
+					ul(class="list pl3")
+						block navigation
+
+		div#content(class="bg-near-white")
+			block content
+
+	footer(class="flex fixed pa1 bt w-100 items-center justify-between bg-white")
+		div#previous
+			svg(class="icon icon-arrow-left2")
+				<use xlink:href="#icon-arrow-left2"></use>
+			span Title
+		div#current
+			ul(class="mt0 mb0")
+				li.close-section Title
+				li#current-section Introduction
+				li.close-section Abstract
+		div#next
+			span Abstract
+			svg(class="icon icon-arrow-right2")
+				<use xlink:href="#icon-arrow-right2"></use>
+
+	script(src="js/basic.js")
+	script(src="js/reader.js")
+	block scripts
+	
+include ./icons.pug
